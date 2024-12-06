@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
-import importToCDN, { autoComplete } from '../../dist/index'
+import importToCDN, { autoComplete } from 'vite-plugin-cdn-import-monorepo'
 
 // https://vitejs.dev/config/
 export default defineConfig({
