@@ -4,7 +4,7 @@ This plugin is forked from [vite-plugin-cdn-import-async](https://github.com/VaJ
 
 修复的bug包含：
 1. 修复了在monorepo方案下，无法正确识别到子包的路径问题
-2. 修复了在html中title标签被注释时，插入的script标签也是被注释的问题
+2. 修复了在html中title标签被注释时，插入的script,link标签也是被注释的问题
 
 # Installation
 
