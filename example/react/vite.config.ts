@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
-import importToCDN, { autoComplete } from 'vite-plugin-cdn-import-monorepo'
+import importToCDN, { autoComplete } from '../../dist/index.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,13 +10,14 @@ export default defineConfig({
               {
                 name: 'vue',
                 var: 'Vue',
-                mode: 'async', // 'async' atrribute will be added to its <script> tag.
+                // mode: 'async', // 'async' atrribute will be added to its <script> tag.
                 path: `https://unpkg.com/vue@next`,
             },
             {
                 name: 'axios',  // Module without 'mode' param will be loaded synchronously.
                 var: 'axios',
-                path: 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js',
+                // path: 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js',
+                path: './config/cdn/axios-1.5.1.js',
             }
                 // autoComplete('react-dom'),
                 // autoComplete('moment'),

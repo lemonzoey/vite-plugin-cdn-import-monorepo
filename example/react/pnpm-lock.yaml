@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^2.3.7
     version: 2.9.15
   vite-plugin-cdn-import-monorepo:
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
 
 packages:
 
@@ -1710,8 +1710,8 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /vite-plugin-cdn-import-monorepo@0.0.1:
-    resolution: {integrity: sha512-htK0m4ESmADdlaohPGf7h0ha6wwDSV+7xwbMqMZjZPE/tfTMbEGprW0nKF+VtbR9ecP/rX0leCCnD5kb30uLOA==}
+  /vite-plugin-cdn-import-monorepo@0.0.2:
+    resolution: {integrity: sha512-gJzeXdREf3Cq0A04SqAiJI2zY9LnoXLWzppa93MYmMo8DZ3V4V7wiYhHgo4Iljpsc4QbiQvnAea4+0LYxyY7Hg==}
     dependencies:
       rollup: 3.29.5
       rollup-plugin-external-globals: 0.6.1(rollup@3.29.5)

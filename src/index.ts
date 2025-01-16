@@ -36,7 +36,8 @@ function getModuleVersion(name: string): string {
  */
 function isFullPath(path: string): boolean {
   const regex = /^(https?:|\/\/)/;
-  return regex.test(path);
+  // return regex.test(path);
+  return true
 }
 
 function renderUrl(url: string, data: {
@@ -86,6 +87,7 @@ function PluginImportToCDN(options: Options): Plugin[] {
 
         pathList = pathList.map(p => {
             if (!version && !isFullPath(p)) {
+                // console.log("🚀 ~ data ~ version:", version)
                 throw new Error(`modules: ${module.name} package.json file does not exist`)
             }
             return renderUrl(module.prodUrl ?? prodUrl, {
