@@ -152,7 +152,6 @@ function isCdnjs(prodUrl) {
   return prodUrl.includes("//cdnjs.cloudflare.com");
 }
 function autoComplete(name) {
-  console.log("🚀 ~ autoComplete ~ name:", name)
   const config = modulesConfig[name];
   if (!config) {
     throw new Error(`The configuration of module ${name} does not exist `);
@@ -271,8 +270,7 @@ function getModuleVersion(name) {
 }
 function isFullPath(path2) {
   const regex = /^(https?:|\/\/)/;
-  return regex.test(path2);
-  // return true
+  return true;
 }
 function renderUrl(url, data) {
   const { path: path2 } = data;
@@ -293,9 +291,7 @@ function PluginImportToCDN(options) {
       v = m(prodUrl);
     } else {
       v = m;
-      
     }
-    console.log("🚀 ~ data ~ v:", v)
     const version = getModuleVersion(v.name);
     let pathList = [];
     if (!Array.isArray(v.path)) {
@@ -309,7 +305,6 @@ function PluginImportToCDN(options) {
     pathList = pathList.map((p) => {
       var _a;
       if (!version && !isFullPath(p)) {
-        console.log("🚀 ~ pathList=pathList.map ~ version:", version)
         throw new Error(`modules: ${module.name} package.json file does not exist`);
       }
       return renderUrl((_a = module.prodUrl) != null ? _a : prodUrl, __spreadProps(__spreadValues({}, module), {
@@ -331,7 +326,6 @@ function PluginImportToCDN(options) {
       cssList
     });
   });
-    console.log("🚀 ~ data ~ v:", v)
   const externalMap = {};
   data.forEach((v) => {
     externalMap[v.name] = v.var;

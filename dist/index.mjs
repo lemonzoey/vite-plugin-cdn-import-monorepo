@@ -270,7 +270,7 @@ function getModuleVersion(name) {
 }
 function isFullPath(path2) {
   const regex = /^(https?:|\/\/)/;
-  return regex.test(path2);
+  return true;
 }
 function renderUrl(url, data) {
   const { path: path2 } = data;
